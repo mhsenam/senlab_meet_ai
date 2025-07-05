@@ -81,6 +81,42 @@ export const SignInView = () => {
                     )}
                   />
                 </div>
+
+                {true && (
+                  <Alert className="bg-destructive/10 border-none">
+                    <OctagonAlertIcon className="h-4 w-4 !text-destructive" />
+                    <AlertTitle>Error</AlertTitle>
+                  </Alert>
+                )}
+
+                <Button type="submit" className="w-full">
+                  Sign In
+                </Button>
+                <div className="after:border-border relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:border-t after:items-center">
+                  <span className="bg-card text-muted-foreground relative z-10 px-2">
+                    Or continue with
+                  </span>
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <Button
+                    variant="outline"
+                    type="button"
+                    className="w-full hover:cursor-pointer"
+                  >
+                    Google
+                  </Button>
+                  <Button
+                    variant="outline"
+                    type="button"
+                    className="w-full hover:cursor-pointer"
+                  >
+                    Github
+                  </Button>
+                </div>
+
+                <div className="text-center text-sm">
+                  Don&apos;t have an account?
+                </div>
               </div>
             </form>
           </Form>
